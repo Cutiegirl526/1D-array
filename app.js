@@ -1,5 +1,5 @@
 /*
-* Demonstrates array declarions by storing single variables into an array.
+* Demonstrates array declarations by storing single variables into an array.
 *
 * Return	Cars (array), Cars length	
 */
@@ -9,13 +9,14 @@ function cars(){
 	var car3 = "Mazda";
 
 	//Create an array declaration named cars and set each car variable as the values.
+	var cars = [car1, car2, car3];
 
 	//Print the created array
-
+	console.log(cars);
 	//Print the array length
-
+	console.log(cars.legnth);
 	//Return the created array and the array length
-	return;
+	return cars + cars.legnth;
 }
 
 console.log(cars());
@@ -28,13 +29,13 @@ console.log(cars());
 */
 function order(food, drink, dessert){
 	//Store the parameters in an array called "order"
-
+	var order = [food, drink, dessert];
 	//Print the array named "order"
-	
+	console.log(order);
 	//Print the length of the array named "order"
-
+	console.log(order.legnth);
 	//Return the order as a complete sentence represented as a string
-	return;
+	return "let's order: " + order[1] + " " + order[2] + " " + order[3] + ".";
 }
 
 console.log(order("Burger", "root beer", "frosty"));
@@ -57,9 +58,11 @@ var currentClasses = [
 */
 function loopToChange(classes){
 	//Print the parameter that is being passed through the function
-
+	console.log(classes);
 	//Use a For loop to iterate through each value in the passed array
-	
+	for (var i = classes.length - 1; i >= 0; i--) {
+		console.log(classes[i]);
+	}
 	//Return classes
 	return;
 }
@@ -74,11 +77,22 @@ console.log(loopToChange(currentClasses));
 */
 function arrayMethodToLoop(numbers){
 	//Print the parameter that is being passed through the function
-
+	console.log(numbers);
 	//Use the forEach() method to add 5 to each value in the passed array
-	
+	numbers.forEach(function (curr, index, arr) {
+		console.log('my current value', curr);
+		//console.log('my index ', index);
+		//console.log('my array', arr);
+
+		curr = 5;
+		console.log(curr = 5);
+
+		var name = splices.push(curr + 5);
+		//console.log(name);
+	})
+
 	//Return the changed array
-	return;
+	return numbers.splices(0, numbers.length);
 }
 
 console.log(arrayMethodToLoop([5, 7, 3, 4, 5]));
